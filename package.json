@@ -1,0 +1,22 @@
+{
+  "name": "workua-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "styles": "sass --watch index.scss:index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/germanmetall/workUA-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/germanmetall/workUA-test/issues"
+  },
+  "homepage": "https://github.com/germanmetall/workUA-test#readme",
+  "dependencies": {
+    "sass": "^1.54.3"
+  }
+}
