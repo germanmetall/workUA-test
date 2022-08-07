@@ -1,14 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work ua test</title>
+    <title>Ratatype  test</title>
     <script src="./index.js"></script>
     <link rel="stylesheet" href="./index.css"></link>
 </head>
 <body>
-    
+    <header class="header">
+        <img class="header__img" src="" alt="Ratatype logo"/>
+
+        <nav class="nav">
+            <div class="nav__item">Тест</div>
+            <div class="nav__item">Тренажер</div>
+            <div class="nav__item">Навчання</div>
+            <div class="nav__item">
+                Більше
+                <img class="toggle__image" src="" alt="Toggle image"/>
+                <div class="dropdown dropdown--desktop">
+                    <div class="dropdown__item">
+                        Для вчителів
+                    </div>
+                    <div class="dropdown__item">
+                        Про нас
+                    </div>
+                    <div class="dropdown__item">
+                        Рейтинг
+                    </div>
+                    <div class="dropdown__item">
+                        Допомога
+                    </div>
+                    <div class="dropdown__item">
+                        Контакти
+                    </div>
+                    <div class="dropdown__item">
+                        Підтримати проєкт
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header__panel header__panel--desktop">
+            <img class="header__img" src="" alt="Refresh"/>
+            <img class="header__img" src="" alt="Toggle dark theme"/>
+            <img class="header__img" src="" alt="Toggle light theme"/>
+            <img class="header__img" src="" alt="Avatar"/>
+        </div>
+
+        <div class="header__panel header__panel--mobile">
+            <img class="header__img" src="" alt="Hamburger mobile menu toggler"/>
+        </div>
+    </header>
+
+    <div class="menu" id="mobileMenuToggle">
+        <nav class="nav">
+            <div class="nav__item">Тренажер</div>
+            <div class="nav__item">Тест</div>
+            <div class="nav__item">Навчання</div>
+            <div class="nav__item">
+                Більше
+                <div class="dropdown dropdown--mobile">
+                    <div class="dropdown__item">
+                        Для вчителів
+                    </div>
+                    <div class="dropdown__item">
+                        Про нас
+                    </div>
+                    <div class="dropdown__item">
+                        Рейтинг
+                    </div>
+                    <div class="dropdown__item">
+                        Допомога
+                    </div>
+                    <div class="dropdown__item">
+                        Контакти
+                    </div>
+                    <div class="dropdown__item">
+                        Підтримати проєкт
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="profile">
+            <img class="profile__img" src="" alt="Profile avatar image"/>
+            <span class="profile__name">Alex</span>
+            <div class="profile__coins coin">
+                <img class="coin__img" src="" alt="Coin image"/>
+                <span class="coin__text">35 543</span>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="bird">
+
+        </div>
+        <div class="textfield">
+            <span id="stringToType"></span>
+        </div>
+    </main>
 </body>
 </html>
