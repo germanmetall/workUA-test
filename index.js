@@ -1,4 +1,4 @@
-function init(){
+function initUI(){
     let 
         dropdownElement = document.querySelector(".dropdown__container"),
         activateDropdownElement = document.querySelector(".dropdown__activate"),
@@ -21,6 +21,54 @@ function init(){
     });
 }
 
+function initTrainer(){
+    let 
+        initString = "We're no strangers to love. You know the rules and so do I".split(""),
+        birdElement = document.querySelector("#bird"),
+        typeElement = document.querySelector("#textfield"),
+        isRunningSuccess = false,
+        isRunningError = false;
+
+    function inputChar(e){
+        if(e.key === initString[0]){
+            initString.shift();
+            startAnimation();
+            typeElement.innerText = initString.join("");
+        }
+        else if(!e.shiftKey){
+            startAnimation(false);
+        }
+    }
+
+    function startAnimation(success = true){
+        if(success){
+            document.querySelectorAll("#beakTop, #beakBottom").forEach(el => {
+                if(!isRunningSuccess) {
+                    isRunningSuccess = true;
+                    el.classList.add("animateSuccess");
+                    setTimeout(() => {
+                        el.classList.remove("animateSuccess");
+                        isRunningSuccess = false;
+                    }, 500);
+                }
+            })
+        }
+        else{
+            if(!isRunningError) {
+                isRunningError = true;
+                document.querySelector("#bird").classList.add("animateError");
+                setTimeout(() => {
+                    document.querySelector("#bird").classList.remove("animateError");
+                    isRunningError = false;
+                }, 500);
+            }
+        }
+    }
+
+    typeElement.innerText = initString.join("");
+    document.addEventListener("keydown", inputChar);
+}
+
 function toggleTheme(){
     document.body.classList.toggle("dark");
 }
@@ -35,4 +83,7 @@ function toggleMenu(){
     })
 }
 
-window.addEventListener("DOMContentLoaded", init);
+window.addEventListener("DOMContentLoaded", () => {
+    initUI();
+    initTrainer();
+});

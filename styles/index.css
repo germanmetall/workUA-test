@@ -16,12 +16,12 @@
 
 body {
   margin: 0;
-  padding: 0;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
   background-color: #ffffff;
   transition: 0.25s;
+  padding: 0 75px;
 }
 body .logo > svg > path:nth-of-type(1) {
   transition: 1.25s;
@@ -70,6 +70,9 @@ body.dark .dropdown__item {
 body.dark .dropdown__item:hover {
   background-color: rgba(255, 255, 255, 0.1019607843);
 }
+body.dark #textfield {
+  color: #ffffff;
+}
 
 .header {
   position: relative;
@@ -79,7 +82,6 @@ body.dark .dropdown__item:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 75px;
 }
 .header__img {
   display: flex;
@@ -260,6 +262,74 @@ body.dark .dropdown__item:hover {
   align-items: center;
   gap: 6px;
 }
+.main {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 96px auto;
+  gap: 16px;
+}
+
+@keyframes beakTop {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes beakBottom {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes error {
+  0% {
+    transform: translateX(10px);
+  }
+  33% {
+    transform: translateX(-10px);
+  }
+  67% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#bird #beakTop {
+  transform-origin: 20% 0%;
+}
+#bird #beakTop.animateSuccess {
+  animation: beakTop 0.5s;
+}
+#bird #beakBottom {
+  transform-origin: 0 0;
+}
+#bird #beakBottom.animateSuccess {
+  animation: beakBottom 0.5s;
+}
+#bird.animateError {
+  animation: error 0.5s;
+}
+
+#textfield {
+  font-family: "Montserrat-Bold";
+  font-size: 120px;
+  line-height: 136px;
+  width: max-content;
+  color: #0a335c;
+  white-space: pre;
+}
+
 #cross, #burger {
   display: none;
 }
@@ -275,8 +345,8 @@ body.dark .dropdown__item:hover {
 }
 
 @media (min-width: 769px) and (max-width: 1000px) {
-  .header {
-    padding: 0 16px;
+  body {
+    padding: 0 44px;
   }
   .header .logo {
     margin-right: 12px;
@@ -290,12 +360,18 @@ body.dark .dropdown__item:hover {
   .nav {
     gap: 4px;
   }
+  #textfield {
+    font-size: 96px;
+    line-height: 112px;
+  }
 }
 @media (max-width: 768px) {
+  body {
+    padding: 0 16px;
+  }
   .header {
     position: relative;
     z-index: 2;
-    padding: 0 44px;
   }
   .header__panel--desktop {
     display: none;
@@ -311,6 +387,10 @@ body.dark .dropdown__item:hover {
   }
   .dropdown__mobile {
     display: flex;
+  }
+  #textfield {
+    font-size: 48px;
+    line-height: 58px;
   }
 }
 
