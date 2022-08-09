@@ -505,3 +505,11 @@ body{
         display: flex;
     }
 }
+
+@media (max-height: 700px){
+    .nav{
+        &--mobile{
+            padding-top: 72px;
+        }
+    }
+}

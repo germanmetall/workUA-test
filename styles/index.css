@@ -448,5 +448,10 @@ body.dark #textfield {
     display: flex;
   }
 }
+@media (max-height: 700px) {
+  .nav--mobile {
+    padding-top: 72px;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
