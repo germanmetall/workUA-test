@@ -433,6 +433,9 @@ body.dark #textfield {
   #textfield {
     font-size: 48px;
     line-height: 58px;
+    overflow: hidden;
+    text-overflow: clip;
+    width: 100%;
   }
   #mobileActions {
     display: flex;

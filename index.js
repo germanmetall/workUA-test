@@ -108,10 +108,8 @@ function toggleMenu(onInput = false){
 
 window.addEventListener("DOMContentLoaded", () => {
     initUI();
-    if(window.innerWidth > 768){
-        initTrainer();
-    }
-    else{
-        alert("Encouraged by ratatype.com (as said in the instructions)! \nNot supporting mobile devices there - no supporting mobile devices here!");
+    initTrainer();
+    if(window.innerWidth <= 768){
+        alert("Encouraged by ratatype.com (as said in the instructions)! \nNot supporting mobile devices there - not supporting mobile devices here!");
     }
 });
