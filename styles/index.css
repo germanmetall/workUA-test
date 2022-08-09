@@ -165,6 +165,7 @@ body.dark #textfield {
   padding-top: 112px;
   padding-left: 44px;
   gap: 16px;
+  overflow-y: auto;
 }
 .nav--mobile .nav__item {
   width: 100%;

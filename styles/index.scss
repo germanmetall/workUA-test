@@ -175,6 +175,7 @@ body{
         padding-top: calc(72px + 40px);
         padding-left: 44px;
         gap: 16px;
+        overflow-y: auto;
 
         .nav{
             &__item{
